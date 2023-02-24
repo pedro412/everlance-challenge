@@ -1,26 +1,23 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
+import { TableHeader } from './components/TableHeader';
+import { Navbar } from './components/Navbar';
+import { UserCard } from './components/UserCard';
 
-function App() {
+export const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <Navbar />
+      <div className="max-w-[1024px] m-auto mt-14">
+        <TableHeader />
+        <div className="mt-10">
+          <UserCard
+            name="pedro412"
+            url="https:google.com"
+            profilePic="https://avatars.githubusercontent.com/u/24465570?v=4"
+          />
+        </div>
+      </div>
     </div>
   );
-}
-
-export default App;
+};
