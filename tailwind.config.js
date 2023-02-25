@@ -8,6 +8,9 @@ module.exports = {
         body: '#333',
         everlance: '#36b59f',
       },
+      gridTemplateColumns: {
+        users: 'repeat(3, 1fr)',
+      },
     },
   },
   plugins: [],
