@@ -1,6 +1,6 @@
 import axios from 'axios';
 import { PER_PAGE } from '../constants';
-import { GitHubResponse, UserDetail } from '../types';
+import { GitHubResponse, UserDetail } from '../interfaces';
 
 export const githubApi = axios.create({
   baseURL: 'https://api.github.com/',

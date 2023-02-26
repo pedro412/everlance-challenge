@@ -1,4 +1,4 @@
-import { useUsers } from '../hooks/useUsers';
+import { useUsers } from '../../hooks/useUsers';
 import { TableHeader } from './TableHeader';
 import { UsersTable } from './UsersTable';
 

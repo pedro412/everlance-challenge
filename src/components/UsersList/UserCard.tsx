@@ -1,7 +1,5 @@
-import React from 'react';
-import { FaGithub } from 'react-icons/fa';
-
 import { Link } from 'react-router-dom';
+import { FaGithub } from 'react-icons/fa';
 
 export const UserCard = ({
   name,
@@ -13,7 +11,10 @@ export const UserCard = ({
   profilePic: string;
 }) => {
   return (
-    <div className="border-solid border-2 rounded w-80 py-4 px-6">
+    <div
+      data-testid="user-card"
+      className="border-solid border-2 rounded w-80 py-4 px-6"
+    >
       <div className="flex items-center mb-6">
         <img
           className="bg-body w-14 h-14 rounded-full mr-4"

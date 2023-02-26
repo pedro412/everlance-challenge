@@ -1,0 +1,48 @@
+export const usersMock = [
+  {
+    login: 'sindresorhus',
+    id: 170270,
+    node_id: 'MDQ6VXNlcjE3MDI3MA==',
+    avatar_url: 'https://avatars.githubusercontent.com/u/170270?v=4',
+    gravatar_id: '',
+    url: 'https://api.github.com/users/sindresorhus',
+    html_url: 'https://github.com/sindresorhus',
+    followers_url: 'https://api.github.com/users/sindresorhus/followers',
+    following_url:
+      'https://api.github.com/users/sindresorhus/following{/other_user}',
+    gists_url: 'https://api.github.com/users/sindresorhus/gists{/gist_id}',
+    starred_url:
+      'https://api.github.com/users/sindresorhus/starred{/owner}{/repo}',
+    subscriptions_url:
+      'https://api.github.com/users/sindresorhus/subscriptions',
+    organizations_url: 'https://api.github.com/users/sindresorhus/orgs',
+    repos_url: 'https://api.github.com/users/sindresorhus/repos',
+    events_url: 'https://api.github.com/users/sindresorhus/events{/privacy}',
+    received_events_url:
+      'https://api.github.com/users/sindresorhus/received_events',
+    type: 'User',
+    site_admin: false,
+    score: 1,
+  },
+  {
+    login: 'tj',
+    id: 25254,
+    node_id: 'MDQ6VXNlcjI1MjU0',
+    avatar_url: 'https://avatars.githubusercontent.com/u/25254?v=4',
+    gravatar_id: '',
+    url: 'https://api.github.com/users/tj',
+    html_url: 'https://github.com/tj',
+    followers_url: 'https://api.github.com/users/tj/followers',
+    following_url: 'https://api.github.com/users/tj/following{/other_user}',
+    gists_url: 'https://api.github.com/users/tj/gists{/gist_id}',
+    starred_url: 'https://api.github.com/users/tj/starred{/owner}{/repo}',
+    subscriptions_url: 'https://api.github.com/users/tj/subscriptions',
+    organizations_url: 'https://api.github.com/users/tj/orgs',
+    repos_url: 'https://api.github.com/users/tj/repos',
+    events_url: 'https://api.github.com/users/tj/events{/privacy}',
+    received_events_url: 'https://api.github.com/users/tj/received_events',
+    type: 'User',
+    site_admin: false,
+    score: 1,
+  },
+];

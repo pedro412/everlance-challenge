@@ -1,4 +1,4 @@
-import { UserList } from '../types';
+import { UserList } from '../interfaces';
 import { useQuery } from '@tanstack/react-query';
 import { useEffect, useState } from 'react';
 import { getUsers } from '../api/githubApi';

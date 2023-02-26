@@ -1,7 +1,4 @@
-import { TableHeader } from './components/TableHeader';
 import { Navbar } from './components/Navbar';
-import { UsersTable } from './components/UsersTable';
-import { useUsers } from './hooks/useUsers';
 import { Outlet } from 'react-router';
 
 export const App = () => {

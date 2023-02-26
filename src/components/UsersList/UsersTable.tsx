@@ -1,4 +1,4 @@
-import { UserList } from '../types';
+import { UserList } from '../../interfaces';
 import { UserCard } from './UserCard';
 
 export const UsersTable = ({ users }: { users?: UserList[] }) => {
