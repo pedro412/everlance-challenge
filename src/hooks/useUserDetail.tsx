@@ -1,8 +1,5 @@
-import { UserDetail } from '../types';
 import { useQuery } from '@tanstack/react-query';
-import { useEffect, useState } from 'react';
-import { getUser, getUsers } from '../api/githubApi';
-import { getHasNextPage } from '../utils/utils';
+import { getUser } from '../api/githubApi';
 
 export const useUserDetails = ({
   username = '',
