@@ -7,6 +7,7 @@ export const UsersTable = ({ users }: { users?: User[] }) => {
       {users?.map(({ login, html_url, avatar_url, id }) => (
         <UserCard
           key={id}
+          id={id}
           name={login}
           url={html_url}
           profilePic={avatar_url}

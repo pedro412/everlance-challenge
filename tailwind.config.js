@@ -5,8 +5,10 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        body: '#333',
+        title: '#333',
+        body: '#74767c',
         everlance: '#36b59f',
+        'light-grey': '#e5e7eb',
       },
       gridTemplateColumns: {
         users: 'repeat(3, 1fr)',

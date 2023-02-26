@@ -2,20 +2,20 @@ import { useState } from 'react';
 import { FaSearch } from 'react-icons/fa';
 
 export const TableHeader = ({
-  search,
   onSearchChange,
 }: {
-  search: string;
   onSearchChange: (e: any) => void;
 }) => {
   const [input, setInput] = useState('');
+
   const handleSubmit = (e: any) => {
     e.preventDefault();
     onSearchChange(input);
   };
+
   return (
     <div className="flex items-center justify-between">
-      <h1 className="text-2xl text-body font-medium">GitHub Users</h1>
+      <h1 className="text-2xl text-title font-medium">GitHub Users</h1>
       <div className="relative">
         <FaSearch className="absolute top-3 left-3" size={18} color="#e5e7eb" />
         <form onSubmit={handleSubmit}>
