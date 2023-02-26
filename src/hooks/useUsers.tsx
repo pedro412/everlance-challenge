@@ -1,40 +1,32 @@
-import { GitHubResponse, User } from '../types';
+import { User } from '../types';
 import { useQuery } from '@tanstack/react-query';
 import { useEffect, useState } from 'react';
+import { getUsers } from '../api/githubApi';
+import { getHasNextPage } from '../utils/utils';
 
-const getUsers = async (
-  search: string,
-  page: number
-): Promise<GitHubResponse> => {
-  const res = await fetch(
-    `https://api.github.com/search/users?q="${search}"&page=${page}&per_page=10`
-  );
-  return res.json();
-};
-
-export const useUsers = ({
-  search,
-  page,
-}: {
-  search: string;
-  page: number;
-}) => {
+export const useUsers = () => {
   const [users, setUsers] = useState<User[]>([]);
+  const [search, setSearch] = useState('');
+  const [page, setPage] = useState(1);
+  const [hastNextPage, setHasNextPage] = useState(false);
 
   const { data, isLoading, refetch, error, isError } = useQuery(
-    ['users', { search, page }],
+    ['users', search, page],
     () => getUsers(search, page),
-    { refetchOnWindowFocus: false }
+    { staleTime: 1000 * 60 * 60 }
   );
 
   useEffect(() => {
     if (data?.items) {
-      setUsers(data?.items);
+      setUsers((prevUsers) =>
+        page === 1 ? data.items : [...prevUsers, ...data.items]
+      );
+      setHasNextPage(getHasNextPage(data?.total_count, page));
     }
   }, [data]);
 
   useEffect(() => {
-    refetch();
+    setPage(1);
   }, [search]);
 
   useEffect(() => {
@@ -47,5 +39,9 @@ export const useUsers = ({
     search,
     error,
     isError,
+    hastNextPage,
+    setSearch,
+    page,
+    setPage,
   };
 };
