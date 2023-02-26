@@ -4,12 +4,10 @@ import { FaGithub } from 'react-icons/fa';
 import { Link } from 'react-router-dom';
 
 export const UserCard = ({
-  id,
   name,
   url,
   profilePic,
 }: {
-  id: number;
   name: string;
   url: string;
   profilePic: string;
@@ -25,9 +23,11 @@ export const UserCard = ({
         <h2 className="font-medium text-title text-lg">{name}</h2>
       </div>
       <div className="flex items-center justify-between">
-        <FaGithub size={22} />
+        <a target="_blank" href={url}>
+          <FaGithub size={22} />
+        </a>
         <div>
-          <Link className="text-everlance" to={`/user/${id}`}>
+          <Link className="text-everlance" to={`/user/${name}`}>
             View profile
           </Link>
         </div>
